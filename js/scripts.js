@@ -2,7 +2,7 @@ var translateString = function(string) {
   var numChars = string.length;
   var charArray = string.split('');
   var columns = Math.floor(Math.sqrt(numChars));
-  var numberOfRows = (string.length % (columns ** 2)) ? columns + 1 : columns;
+  var numberOfRows = Math.ceil(Math.sqrt(numChars));
   var bigArray = [];
   while (charArray.length > 0) {
     bigArray.push(charArray.splice(0, columns));
